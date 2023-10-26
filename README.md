@@ -19,7 +19,7 @@ The current implementation can be used with manual handling. Middleware version 
 [.ideHandler](/Sources/PioneerHummingbird/Http/Pioneer+IDE.swift) will serve incoming request with the configured [GraphQL IDE](https://pioneer.dexclaimation.com/docs/features/graphql-ide).
 
 ```swift
-app.router.on("graphql", method: .GET) { req in
+app.router.on("graphql", method: .GET, options: .editResponse) { req in
     try server.ideHandler(req: req)
 }
 ```
@@ -30,7 +30,7 @@ app.router.on("graphql", method: .GET) { req in
 [.httpHandler](/Sources/PioneerHummingbird/Http/Pioneer+Http.swift) will execute a GraphQL operation and return a well-formatted response.
 
 ```swift
-app.router.on("graphql", method: .POST) { req in
+app.router.on("graphql", method: .POST, options: .editResponse) { req in
     try await server.httpHandler(
         req: req, 
         context: { req, patch in 
