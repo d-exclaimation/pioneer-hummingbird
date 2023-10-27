@@ -1,7 +1,7 @@
 # Pioneer + Hummingbird Integration
 
 > **Warning**
-> This integration is still in heavy developmenet and may have some bugs and breaking changes.
+> This integration is still in heavy development and may have some bugs and breaking changes.
 
 
 ## Usage
